@@ -1,2 +1,2 @@
 #!/bin/bash
-mkrie /tmp/my_first_directory
+mkdie /tmp/my_first_directory
