@@ -1,2 +1,10 @@
 #!/bin/bash
-chown --from=quillaume betty hello
+# Check if the file is owned by guillaume
+current_owner=$(stat -c %U hello)
+if [ "$current_owner" = "guillaume" ]; then
+  # Change the owner to betty
+  chown betty hello
+else
+  # Do nothing
+  echo "The file hello is not owned by guillaume."
+fi
